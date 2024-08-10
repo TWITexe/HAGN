@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class EndGame : MonoBehaviour
@@ -14,6 +13,8 @@ public class EndGame : MonoBehaviour
         {
             Debug.Log("Game Over");
             saveDataJson.SaveData();
+            
         }
-    }  
+    }
+
 }

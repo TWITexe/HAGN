@@ -13,6 +13,7 @@ public class SaveDataJSON : MonoBehaviour
     }
     public void SaveData()
     {
+        hagnData.hagnCoin = Coins.Instance.GetCoinsInfo();
         string json = JsonUtility.ToJson(hagnData);
         File.WriteAllText(Application.persistentDataPath + "SaveData.json", json);
         
@@ -24,21 +25,24 @@ public class SaveDataJSON : MonoBehaviour
         {
             string json = File.ReadAllText(path);
             hagnData = JsonUtility.FromJson<HAGNData>(json);
+            Debug.Log("Data Loading");
         }
         else
         {
             hagnData = new HAGNData();
         }
+        Coins.Instance.AddCoins(hagnData.hagnCoin);
     }
     [ContextMenu("DeleteSave")]
     public void DeleteSave()
     {
         hagnData.hagnCoin = 0;
+        Coins.Instance.SpendCoins(Coins.Instance.GetCoinsInfo());
     }
     
     [System.Serializable]
     public class HAGNData
     {
-        public int hagnCoin = Coins.Instance.GetCoinsInfo();
+        public int hagnCoin = 0;
     }
 }
