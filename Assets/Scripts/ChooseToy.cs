@@ -11,7 +11,7 @@ public class ChooseToy : MonoBehaviour
         Muffin,
         Holly,
         Paws,
-        Nessie
+        Tussy
     }
     void Start()
     {
@@ -33,9 +33,9 @@ public class ChooseToy : MonoBehaviour
     {
         Toy toy = Toy.Paws;
     }
-    public void ChoseNessie()
+    public void ChoseTussy()
     {
-        Toy toy = Toy.Nessie;
+        Toy toy = Toy.Tussy;
     }
     public void PutToBed()
     {
