@@ -7,8 +7,12 @@ using TMPro;
 public class ViewCoins : MonoBehaviour
 {
     [SerializeField] private TMP_Text coinText;
+    [SerializeField] private bool onTheGame = false;
     void Update()
     {
-        coinText.text = $"{Coins.Instance.GetCoinsInfo()}";
+        if (onTheGame)
+            coinText.text = $"{Coins.Instance.GetCoinsLvlInfo()}";
+        else 
+            coinText.text = $"{Coins.Instance.GetCoinsInfo()}";
     }
 }

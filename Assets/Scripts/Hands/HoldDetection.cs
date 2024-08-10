@@ -38,7 +38,7 @@ public class HoldDetection : MonoBehaviour
                     // Проверяем, достигнут ли порог времени удержания
                     if (holdTimer >= holdTimeThreshold)
                     {
-                        Coins.Instance.AddCoins(1);
+                        Coins.Instance.AddLvlCoins(1);
                         Destroy(this.gameObject);
                         ResetHold(); // Сбрасываем состояние удержания после выполнения действия
                     }

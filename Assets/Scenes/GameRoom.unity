@@ -447,6 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinAmount: 0
+  coinLvlAmount: 0
 --- !u!4 &903704373
 Transform:
   m_ObjectHideFlags: 0
@@ -785,6 +786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 291382805}
+  onTheGame: 1
 --- !u!1 &1825092809
 GameObject:
   m_ObjectHideFlags: 0

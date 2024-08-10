@@ -7,6 +7,7 @@ public class Coins : MonoBehaviour
 
     // Переменная для хранения количества валюты
     [SerializeField] private int coinAmount;
+    [SerializeField] private int coinLvlAmount;
 
     private void Awake()
     {
@@ -32,13 +33,33 @@ public class Coins : MonoBehaviour
         return coinAmount;
     }
 
-    // Метод для добавления валюты
+    public int GetCoinsLvlInfo()
+    {
+        return coinLvlAmount;
+    }
+    // Метод для добавления валюты вконце уровня
     public void AddCoins(int amount)
     {
         if (amount > 0)
             coinAmount += amount;
     }
+    
+    // Метод для прибавления валюты на уровне 
+    public void AddLvlCoins(int amount)
+    {
+        if (amount > 0)
+            coinLvlAmount += amount;
+    }
 
+    public bool SpendLvlCoins(int amount)
+    {
+        if (coinLvlAmount >= amount)
+        {
+            coinLvlAmount -= amount;
+            return true;
+        }
+        return false;
+    }
     // Метод для списания валюты
     public bool SpendCoins(int amount)
     {
@@ -49,5 +70,7 @@ public class Coins : MonoBehaviour
         }
         return false;
     }
+    
+    
     
 }
