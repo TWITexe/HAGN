@@ -261,9 +261,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bedObject: {fileID: 1051345540}
-  handPrefab: {fileID: 2659913269725920853, guid: 160d018fc76d2e04bbbd3cd48fc0b0cc, type: 3}
   timeToSpawn: 2
-  step: 2
+  speed: 8
+  hands:
+  - {fileID: 2659913269725920853, guid: 160d018fc76d2e04bbbd3cd48fc0b0cc, type: 3}
+  - {fileID: 9095750918128470487, guid: 8fc3c8b3dd8f63346a750ebd49ec40f8, type: 3}
+  - {fileID: 1109801600967300334, guid: 162b12cc9fa6f92438f828c941ac3566, type: 3}
 --- !u!4 &566380480
 Transform:
   m_ObjectHideFlags: 0
@@ -395,8 +398,8 @@ Transform:
   m_GameObject: {fileID: 1051345539}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6135}
-  m_LocalScale: {x: 30.675001, y: 30.675001, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -5805}
+  m_LocalScale: {x: 30, y: 30, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1701595735}
@@ -735,7 +738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 0
-  m_AspectRatio: 0.5623472
+  m_AspectRatio: 0.56330746
 --- !u!114 &1969200731
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,14 +4,20 @@ using DG.Tweening;
 
 public class HandsSpawner : MonoBehaviour
 {
-    [SerializeField] Transform bedObject;
-    [SerializeField] GameObject handPrefab;
+    // Трансформ кровати
+    [SerializeField] private Transform bedObject;
+    // Время между спавнами рук
     [SerializeField] int timeToSpawn;
+    // Скорость перемещения рук к кровати после спавна
     [SerializeField] private int speed;
-    GameObject hand;
-    [SerializeField] int step = 2; // шаг для перемещения руки к кровати.
+    // Массив различных видов рук
+    [SerializeField] private GameObject[] hands;
+    // Заспавнившаяся рука
+    private GameObject hand;
+    // Данные для определения поворота рук
     float posX = 0;
     float posY = 0;
+    // Случайная сторона для спавна руки ( случайный выбор из 4 сторон )
     int randomSide = 0; // ( от 1 до 4 )
 
     private void Start()
@@ -19,36 +25,28 @@ public class HandsSpawner : MonoBehaviour
         StartCoroutine(SpawnHead());
     }
 
-    void Update()
-    {
-        if ( hand == null && transform.position != bedObject.transform.position)
-        {
-           hand.transform.position = Vector3.MoveTowards(transform.position, bedObject.position, step);
-        }
-    }
-
     IEnumerator SpawnHead()
     {
         yield return new WaitForSeconds(timeToSpawn);
         ChooseSpawnPosition();
-        hand = Instantiate(handPrefab, new Vector2(posX, posY),transform.rotation);
+        hand = Instantiate(hands[Random.Range(0, hands.Length)], new Vector2(posX, posY),transform.rotation);
         LookAtBed(hand);
         hand.transform.DOMove(bedObject.transform.position, speed);
         StartCoroutine(SpawnHead());
 
     }
-    void ChooseSpawnPosition()
-    {
-        randomSide = Random.Range(1, 5);
-        switch (randomSide)
-        {
-            case 1:
-                posX = Random.Range(-3, 3);
-                posY = 5.5f;
-                break;
-            case 2:
-                posX = -3;
-                posY = Random.Range(-5, 5);
+    private void ChooseSpawnPosition()
+                           {
+                               randomSide = Random.Range(1, 5);
+                               switch (randomSide)
+                               {
+                                   case 1:
+                                       posX = Random.Range(-3, 3);
+                                       posY = 5.5f;
+                                       break;
+                                   case 2:
+                                       posX = -3;
+                                       posY = Random.Range(-5, 5);
                 break;
             case 3:
                 posX = 3;
