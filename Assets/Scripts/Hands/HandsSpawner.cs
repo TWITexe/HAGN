@@ -36,17 +36,17 @@ public class HandsSpawner : MonoBehaviour
 
     }
     private void ChooseSpawnPosition()
-                           {
-                               randomSide = Random.Range(1, 5);
-                               switch (randomSide)
-                               {
-                                   case 1:
-                                       posX = Random.Range(-3, 3);
-                                       posY = 5.5f;
-                                       break;
-                                   case 2:
-                                       posX = -3;
-                                       posY = Random.Range(-5, 5);
+   {
+       randomSide = Random.Range(1, 5);
+       switch (randomSide)
+       {
+           case 1:
+               posX = Random.Range(-3, 3);
+               posY = 5.5f;
+               break;
+           case 2:
+               posX = -3;
+               posY = Random.Range(-5, 5);
                 break;
             case 3:
                 posX = 3;

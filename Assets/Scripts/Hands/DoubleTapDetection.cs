@@ -35,6 +35,7 @@ public class DoubleTapDetection : MonoBehaviour
                     }
                     else if (tapCount == 2 && Time.time - lastTapTime < doubleTapThreshold)
                     {
+                        Coins.Instance.AddCoins(1);
                         Destroy(this.gameObject);
                         tapCount = 0; // Сбрасываем счетчик после двойного нажатия
                     }

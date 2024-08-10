@@ -49,6 +49,7 @@ public class SwipeDetection : MonoBehaviour
                 // Проверяем, совпадает ли направление свайпа с направлением, противоположным движению объекта
                 if (Vector2.Dot(swipeDirection, -directionToZero) > swipeLength) //swipeLenght - пороговое значение, можно корректировать
                 {
+                    Coins.Instance.AddCoins(1);
                     Destroy(this.gameObject);
                 }
             }
