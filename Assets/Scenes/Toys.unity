@@ -384,7 +384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 268, y: 552}
+  m_AnchoredPosition: {x: 268, y: 467}
   m_SizeDelta: {x: 490, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &277251657
@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 416970380}
   - component: {fileID: 416970379}
   m_Layer: 5
-  m_Name: NessieToy
+  m_Name: TussyToy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,7 +592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 268, y: -427}
+  m_AnchoredPosition: {x: 268, y: -325}
   m_SizeDelta: {x: 490, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &416970379
@@ -725,7 +725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -982}
+  m_AnchoredPosition: {x: 0, y: -929}
   m_SizeDelta: {x: 1000, y: 236.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &490236658
@@ -1133,6 +1133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinAmount: 0
+  coinLvlAmount: 0
 --- !u!4 &808905603
 Transform:
   m_ObjectHideFlags: 0
@@ -1318,7 +1319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -261, y: 552}
+  m_AnchoredPosition: {x: -261, y: 467}
   m_SizeDelta: {x: 490, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1122528519
@@ -1445,6 +1446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 245613364}
+  onTheGame: 0
 --- !u!4 &1159927094
 Transform:
   m_ObjectHideFlags: 0
@@ -1557,7 +1559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1619204068
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1751,7 +1753,7 @@ GameObject:
   - component: {fileID: 1640508444}
   - component: {fileID: 1640508443}
   m_Layer: 5
-  m_Name: NessieText
+  m_Name: TussyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1809,7 +1811,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nessie
+  m_Text: Tussy
 --- !u!222 &1640508444
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2007,7 +2009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1951188590
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2146,7 +2148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -261, y: -427}
+  m_AnchoredPosition: {x: -261, y: -325}
   m_SizeDelta: {x: 490, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2066456094
