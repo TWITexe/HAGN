@@ -6,7 +6,8 @@ using System.Collections;
 public class ScreenFadeManager : MonoBehaviour
 {
     // Время плавного перехода в секундах
-    [SerializeField] private float fadeDuration = 1.0f;
+    [SerializeField] private float fadeDurationIn = 1.0f;
+    [SerializeField] private float fadeDurationOut = 1.0f;
     private bool isFadeOut = false;
     private void Awake()
     {
@@ -24,9 +25,9 @@ public class ScreenFadeManager : MonoBehaviour
     {
         float elapsedTime = 0f;
         Color color =  gameObject.GetComponent<Image>().color;
-        while (elapsedTime < fadeDuration)
+        while (elapsedTime < fadeDurationIn)
         {
-            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDurationIn);
             gameObject.GetComponent<Image>().color = new Color(color.r, color.g, color.b, alpha);
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -38,9 +39,9 @@ public class ScreenFadeManager : MonoBehaviour
     {
         float elapsedTime = 0f;
         Color color =  gameObject.GetComponent<Image>().color;
-        while (elapsedTime < fadeDuration)
+        while (elapsedTime < fadeDurationOut)
         {
-            float alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration);
+            float alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDurationOut);
             gameObject.GetComponent<Image>().color = new Color(color.r, color.g, color.b, alpha);
             elapsedTime += Time.deltaTime;
             yield return null;

@@ -6,6 +6,7 @@ using UnityEngine;
 public class EndGame : MonoBehaviour
 {
     [SerializeField] private SaveDataJSON saveDataJson;
+    [SerializeField] private ScreenFadeManager fade; // Плавный переход между сценами
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.GetComponent<DoubleTapDetection>() != null ||
@@ -16,7 +17,7 @@ public class EndGame : MonoBehaviour
             Coins.Instance.AddCoins(Coins.Instance.GetCoinsLvlInfo()); // Прибавляем коины уровня в игру
             Coins.Instance.SpendLvlCoins(Coins.Instance.GetCoinsLvlInfo()); // Обнуляем коины на уровне
             saveDataJson.SaveData();
-            SceneManager.LoadScene(1);
+            fade.FadeOutToScene(1);
 
         }
     }
