@@ -427,8 +427,10 @@ GameObject:
   - component: {fileID: 903704373}
   - component: {fileID: 903704372}
   - component: {fileID: 903704374}
+  - component: {fileID: 903704375}
+  - component: {fileID: 903704376}
   m_Layer: 0
-  m_Name: SaveData
+  m_Name: SaveLoadData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -477,6 +479,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hagnData:
     hagnCoin: 0
+--- !u!114 &903704375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903704371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 150b3c11ee91138448059844322bf1d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 1969200731}
+  muffinRoom: {fileID: 21300000, guid: ed8326ee2c683154fa9aa9dca14bc7da, type: 3}
+  hollyRoom: {fileID: 21300000, guid: 45dbe4cc860de9244a0ab4fc1c279175, type: 3}
+  pawsRoom: {fileID: 21300000, guid: d8f3dc6863270e848a05b7e44e98f277, type: 3}
+  tussyRoom: {fileID: 21300000, guid: 8aa4288f54d5fe04d8f0c52221ec1e60, type: 3}
+--- !u!114 &903704376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903704371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878b5073ea699a2469cf2ffeb8ef5b8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1051345539
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +899,7 @@ GameObject:
   - component: {fileID: 1969200731}
   - component: {fileID: 1969200730}
   m_Layer: 5
-  m_Name: Background
+  m_Name: BackgroundMuffin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

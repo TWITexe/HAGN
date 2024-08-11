@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ChooseToy : MonoBehaviour
 {
-    private Toy toy = Toy.Muffin;
+    public static ChooseToy Instance { get; private set; }
+    private Toy toy;
     public enum Toy
     {
         Muffin,
@@ -13,32 +12,52 @@ public class ChooseToy : MonoBehaviour
         Paws,
         Tussy
     }
-    void Start()
+
+    /*void Awake()
     {
-        
-    }
-    void Update()
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }*/
+
+    
+    public Toy GetToy()
     {
-        
+        return toy;
     }
     public void ChoseMuffin()
     {
-        Toy toy = Toy.Muffin;
+        toy = Toy.Muffin;
+        PlayerPrefs.SetInt("SelectedToy", (int)Toy.Muffin);
+        PlayerPrefs.Save(); // Явное сохранение данных
+        Debug.Log("Selected Toy Saved: " + PlayerPrefs.GetInt("SelectedToy"));
     }
     public void ChoseHolly()
     {
-        Toy toy = Toy.Holly;
+        toy = Toy.Holly;
+        PlayerPrefs.SetInt("SelectedToy", (int)Toy.Holly);
+        PlayerPrefs.Save(); // Явное сохранение данных
+        Debug.Log("Selected Toy Saved: " + PlayerPrefs.GetInt("SelectedToy"));
     }
     public void ChosePaws()
     {
-        Toy toy = Toy.Paws;
+        toy = Toy.Paws;
+        PlayerPrefs.SetInt("SelectedToy", (int)Toy.Paws);
+        PlayerPrefs.Save(); // Явное сохранение данных
+        Debug.Log("Selected Toy Saved: " + PlayerPrefs.GetInt("SelectedToy"));
+        
     }
     public void ChoseTussy()
     {
-        Toy toy = Toy.Tussy;
-    }
-    public void PutToBed()
-    {
-        SceneManager.LoadScene(2);
+        toy = Toy.Tussy;
+        PlayerPrefs.SetInt("SelectedToy", (int)Toy.Tussy);
+        PlayerPrefs.Save(); // Явное сохранение данных
+        Debug.Log("Selected Toy Saved: " + PlayerPrefs.GetInt("SelectedToy"));
     }
 }
