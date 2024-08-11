@@ -41,20 +41,20 @@ public class HandsSpawner : MonoBehaviour
        switch (randomSide)
        {
            case 1:
-               posX = Random.Range(-3, 3);
-               posY = 5.5f;
+               posX = Random.Range(-4, 4);
+               posY = 6.5f;
                break;
            case 2:
-               posX = -3;
-               posY = Random.Range(-5, 5);
+               posX = -4;
+               posY = Random.Range(-6, 6);
                 break;
             case 3:
-                posX = 3;
-                posY = Random.Range(-5, 5);
+                posX = 4;
+                posY = Random.Range(-6, 6);
                 break;
             case 4:
-                posX = Random.Range(-3, 3);
-                posY = -5.5f;
+                posX = Random.Range(-4, 4);
+                posY = -6.5f;
                 break;
         }
     }

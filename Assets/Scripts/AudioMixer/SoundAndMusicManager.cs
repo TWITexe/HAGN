@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SoundAndMusicManager : MonoBehaviour
@@ -14,36 +15,39 @@ public class SoundAndMusicManager : MonoBehaviour
     void Start ()
     {
         if (instance == null) instance = this;
- 
-        DontDestroyOnLoad(gameObject); // объект не будет уничтожатся при загрузке новой сцены
+            DontDestroyOnLoad(gameObject); // объект не будет уничтожатся при загрузке новой сцены
     }
-    
- 
+    public static AudioClip[] GetClips() // Получения списка аудиоклипов
+    {
+        return instance.audioClips;
+    }
     public void PlaySoundClip(AudioClip clip)
     {
         gameSoundFX.clip = clip;
         gameSoundFX.Play();
     }
-    public void StopSoundClip(AudioClip clip)
+    public void PlayMusicClip(AudioClip clip) 
+    {
+        gameMusic.clip = clip;
+        gameMusic.Play();
+    }
+    public void StopMusicClip(AudioClip clip)
     {
         gameMusic.clip = clip;
         gameMusic.Stop();
     }
-
-    public static AudioClip[] GetClips ()
+    
+    // Далее методы для удобства, чтобы в других скриптах постоянно не писать: AudioManager.insatance.playSound(clip);
+    public static void PlayMusic(AudioClip clip) // Включение музыки
     {
-        return instance.audioClips;
+        instance.PlayMusicClip(clip);
     }
- 
- 
-    // это просто заглушка, чтобы в других скриптах НЕ писать AudioManager.insatance.playSound(clip);
- 
-    public static void PlaySound(AudioClip clip) 
+    public static void StopMusic(AudioClip clip)  // Выключение музыки
+    {
+        instance.StopMusicClip(clip);
+    }
+    public static void PlaySound(AudioClip clip)  // Включение звуков ( звуки выключать не надо, они короткие )
     {
         instance.PlaySoundClip(clip);
-    }
-    public static void StopSound(AudioClip clip) 
-    {
-        instance.StopSoundClip(clip);
     }
 }

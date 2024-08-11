@@ -334,7 +334,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1030733660}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioMixerVolume, Assembly-CSharp
         m_MethodName: ChangeMusicVolume
         m_Mode: 1
@@ -346,7 +346,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1030733659}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
         m_MethodName: SoundForButton
         m_Mode: 1
@@ -587,7 +587,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1030733659}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
         m_MethodName: SoundForButton
         m_Mode: 1
@@ -807,7 +807,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1030733659}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
         m_MethodName: SoundForButton
         m_Mode: 1
@@ -952,7 +952,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1030733659}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
         m_MethodName: SoundForButton
         m_Mode: 1
@@ -964,14 +964,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1030733659}
+      - m_Target: {fileID: 4349583785270279107, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
         m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
-        m_MethodName: OffSound
+        m_MethodName: PlayMusic
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1494,93 +1494,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960534432}
   m_CullTransparentMesh: 1
---- !u!1001 &1030733658
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3122701803443687031, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122701803443687031, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122701803443687031, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 417.39212
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122701803443687031, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122701803443687031, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122701803443687031, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122701803443687031, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122701803443687031, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122701803443687031, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122701803443687031, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4541105351655308029, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: m_Name
-      value: AudioMixer
-      objectReference: {fileID: 0}
-    - target: {fileID: 4851041687519316979, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: musicButton
-      value: 
-      objectReference: {fileID: 208323007}
-    - target: {fileID: 4851041687519316979, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-      propertyPath: soundButton
-      value: 
-      objectReference: {fileID: 1928066195}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
---- !u!114 &1030733659 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4349583785270279107, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-  m_PrefabInstance: {fileID: 1030733658}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16cdf56f41789264dae3801b3b1ce3ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1030733660 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4851041687519316979, guid: 911d93113c7bb054db00a9b108557c0f, type: 3}
-  m_PrefabInstance: {fileID: 1030733658}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27e9813409772f543864c9d569f6303b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1122528517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,7 +1589,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1030733659}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
         m_MethodName: SoundForButton
         m_Mode: 1
@@ -2469,7 +2382,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1030733660}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioMixerVolume, Assembly-CSharp
         m_MethodName: ChangeSoundFXVolume
         m_Mode: 1
@@ -2481,7 +2394,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1030733659}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
         m_MethodName: SoundForButton
         m_Mode: 1
@@ -2766,7 +2679,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1030733659}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonClickSound, Assembly-CSharp
         m_MethodName: SoundForButton
         m_Mode: 1
@@ -2892,4 +2805,3 @@ SceneRoots:
   - {fileID: 548002211}
   - {fileID: 1159927094}
   - {fileID: 808905603}
-  - {fileID: 1030733658}
