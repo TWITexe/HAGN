@@ -14,9 +14,12 @@ public class EndGame : MonoBehaviour
             other.gameObject.GetComponent<SwipeDetection>() != null)
         {
             Debug.Log("Game Over");
+            SoundAndMusicManager.StopSound(SoundAndMusicManager.GetClips()[2]);
+            
             Coins.Instance.AddCoins(Coins.Instance.GetCoinsLvlInfo()); // Прибавляем коины уровня в игру
             Coins.Instance.SpendLvlCoins(Coins.Instance.GetCoinsLvlInfo()); // Обнуляем коины на уровне
             saveDataJson.SaveData();
+            
             fade.FadeOutToScene(1);
 
         }

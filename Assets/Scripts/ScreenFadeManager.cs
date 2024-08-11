@@ -7,7 +7,7 @@ public class ScreenFadeManager : MonoBehaviour
 {
     // Время плавного перехода в секундах
     [SerializeField] private float fadeDurationIn = 1.0f;
-    [SerializeField] private float fadeDurationOut = 1.0f;
+    [SerializeField] private float fadeDurationOut = 0.5f;
     private bool isFadeOut = false;
     private void Awake()
     {
