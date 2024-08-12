@@ -29,6 +29,7 @@ public class SoundAndMusicManager : MonoBehaviour
     public void PlayMusicClip(AudioClip clip) 
     {
         gameMusic.clip = clip;
+        gameMusic.loop = true;
         gameMusic.Play();
     }
     public void StopMusicClip(AudioClip clip)
@@ -41,6 +42,7 @@ public class SoundAndMusicManager : MonoBehaviour
     public static void PlayMusic(AudioClip clip) // Включение музыки
     {
         instance.PlayMusicClip(clip);
+        
     }
     public static void StopMusic(AudioClip clip)  // Выключение музыки
     {

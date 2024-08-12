@@ -14,11 +14,10 @@ public class EndGame : MonoBehaviour
             other.gameObject.GetComponent<SwipeDetection>() != null)
         {
             SoundAndMusicManager.PlayMusic(SoundAndMusicManager.GetClips()[3]);
-            
             Coins.Instance.AddCoins(Coins.Instance.GetCoinsLvlInfo()); // Прибавляем коины уровня в игру
             Coins.Instance.SpendLvlCoins(Coins.Instance.GetCoinsLvlInfo()); // Обнуляем коины на уровне
             saveDataJson.SaveData();
-            
+            Handheld.Vibrate();
             fade.FadeOutToScene(1);
 
         }

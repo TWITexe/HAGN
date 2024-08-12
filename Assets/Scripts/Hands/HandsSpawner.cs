@@ -9,7 +9,7 @@ public class HandsSpawner : MonoBehaviour
     // Время между спавнами рук
     [SerializeField] int timeToSpawn;
     // Скорость перемещения рук к кровати после спавна
-    [SerializeField] private int speed;
+    [SerializeField] private float speed;
     // Массив различных видов рук
     [SerializeField] private GameObject[] hands;
     // Заспавнившаяся рука
@@ -36,8 +36,8 @@ public class HandsSpawner : MonoBehaviour
 
     }
     private void ChooseSpawnPosition()
-   {
-       randomSide = Random.Range(1, 5);
+    {
+        randomSide = Random.Range(1, 5);
        switch (randomSide)
        {
            case 1:
@@ -57,6 +57,7 @@ public class HandsSpawner : MonoBehaviour
                 posY = -6.5f;
                 break;
         }
+       IncreasingDifficulty();
     }
 
     void LookAtBed(GameObject _hand) // Поворот руки в сторону кровати
@@ -66,5 +67,11 @@ public class HandsSpawner : MonoBehaviour
         float a = Mathf.Atan2(dy, dx) * Mathf.Rad2Deg;
         Quaternion newRotationHand = Quaternion.Euler(0, 0, a);
         _hand.transform.rotation = newRotationHand;
+    }
+
+    void IncreasingDifficulty()
+    {
+        if (speed > 5 )
+            speed -= 0.035f;
     }
 }

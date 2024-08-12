@@ -24,7 +24,7 @@ public class AudioMixerVolume : MonoBehaviour
     {
         if (musicOff)
         {
-            _mixer.audioMixer.SetFloat("MusicVolume", -20);
+            _mixer.audioMixer.SetFloat("MusicVolume", 0);
             musicOff = false;
             musicButton.GetComponent<Image>().sprite = musicOnSprite;
         }
@@ -40,7 +40,7 @@ public class AudioMixerVolume : MonoBehaviour
     {
         if (soundFXOff)
         {
-            _mixer.audioMixer.SetFloat("SoundFXVolume", -20);
+            _mixer.audioMixer.SetFloat("SoundFXVolume", 0);
             soundFXOff = false;
             soundButton.GetComponent<Image>().sprite = soundFXOnSprite;
         }

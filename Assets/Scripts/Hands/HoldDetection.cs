@@ -1,10 +1,22 @@
+using System.Collections;
 using UnityEngine;
+using DG.Tweening;
 
 public class HoldDetection : MonoBehaviour
 {
     private bool isHolding = false; // Флаг, показывающий, удерживается ли объект
     [SerializeField] private float holdTimeThreshold = 1.0f; // Время удержания в секундах
+    [SerializeField] private float moveDuration = 1f; // Длительность анимации движения назад
     private float holdTimer = 0f; // Таймер для отслеживания времени удержания
+    private Vector2 movementDirection; // Направление движения объекта
+    private bool isCaughtMonster = false;
+
+    void Start()
+    {
+        Vector2 startPoint = transform.position;
+        Vector2 target = new Vector2(0, 0); // Цель, к которой движется объект
+        movementDirection = (target - startPoint).normalized; // Направление движения объекта
+    }
 
     void Update()
     {
@@ -38,9 +50,20 @@ public class HoldDetection : MonoBehaviour
                     // Проверяем, достигнут ли порог времени удержания
                     if (holdTimer >= holdTimeThreshold)
                     {
-                        Coins.Instance.AddLvlCoins(1);
-                        Destroy(this.gameObject);
-                        ResetHold(); // Сбрасываем состояние удержания после выполнения действия
+                        // Останавливаем все текущие анимации этого объекта
+                        transform.DOKill();
+                        // Вычисляем конечную точку движения объекта в обратном направлении
+                        Vector2 moveDirection = -movementDirection * 3f;
+                        Vector2 newTargetPosition = (Vector2)transform.position + moveDirection;
+                        // Анимация движения объекта
+                        transform.DOMove(newTargetPosition, moveDuration).SetEase(Ease.OutQuad);
+                        Destroy(this.gameObject, 1.5f);
+                        if (isCaughtMonster == false)
+                        {
+                            Coins.Instance.AddLvlCoins(1);
+                            isCaughtMonster = true;
+                        }
+                            
                     }
                 }
                 else
