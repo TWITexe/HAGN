@@ -8,6 +8,7 @@ public class ScreenFadeManager : MonoBehaviour
     // Время плавного перехода в секундах
     [SerializeField] private float fadeDurationIn = 1.0f;
     [SerializeField] private float fadeDurationOut = 0.5f;
+
     private bool isFadeOut = false;
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class ScreenFadeManager : MonoBehaviour
     {
         float elapsedTime = 0f;
         Color color =  gameObject.GetComponent<Image>().color;
+
         while (elapsedTime < fadeDurationIn)
         {
             float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDurationIn);
@@ -32,6 +34,7 @@ public class ScreenFadeManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+
         gameObject.GetComponent<Image>().color = new Color(color.r, color.g, color.b, 0f);
     }
 
@@ -39,6 +42,7 @@ public class ScreenFadeManager : MonoBehaviour
     {
         float elapsedTime = 0f;
         Color color =  gameObject.GetComponent<Image>().color;
+
         while (elapsedTime < fadeDurationOut)
         {
             float alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDurationOut);
@@ -46,6 +50,7 @@ public class ScreenFadeManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+
         gameObject.GetComponent<Image>().color = new Color(color.r, color.g, color.b, 1f);
 
         // Загрузка новой сцены
