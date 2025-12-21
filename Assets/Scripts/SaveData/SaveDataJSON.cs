@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -13,11 +11,12 @@ public class SaveDataJSON : MonoBehaviour
     }
     public void SaveData()
     {
-        hagnData.hagnCoin = Coins.Instance.GetCoinsInfo();
+        hagnData.hagnCoin = Coins.Instance.GetCoinsCount();
         string json = JsonUtility.ToJson(hagnData);
         File.WriteAllText(Application.persistentDataPath + "SaveData.json", json);
         
     }
+
     public void LoadData()
     {
         string path = Path.Combine(Application.persistentDataPath + "SaveData.json");
@@ -33,11 +32,12 @@ public class SaveDataJSON : MonoBehaviour
         }
         Coins.Instance.AddCoins(hagnData.hagnCoin);
     }
+
     [ContextMenu("DeleteSave")]
     public void DeleteSave()
     {
         hagnData.hagnCoin = 0;
-        Coins.Instance.SpendCoins(Coins.Instance.GetCoinsInfo());
+        Coins.Instance.SpendCoins(Coins.Instance.GetCoinsCount());
     }
     
     [System.Serializable]
