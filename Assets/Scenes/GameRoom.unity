@@ -633,6 +633,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878b5073ea699a2469cf2ffeb8ef5b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  muffin: {fileID: 0}
+  holly: {fileID: 0}
+  paws: {fileID: 0}
+  tussy: {fileID: 0}
+  muffinsSprites: []
+  hollySprites: []
+  pawsSprites: []
+  tussySprites: []
 --- !u!1 &1051345539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,5 +1105,5 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1701595735}
   - {fileID: 903704373}
-  - {fileID: 1825092812}
   - {fileID: 566380480}
+  - {fileID: 1825092812}
