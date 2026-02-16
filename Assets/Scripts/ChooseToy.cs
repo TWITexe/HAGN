@@ -13,7 +13,7 @@ public class ChooseToy : MonoBehaviour
     [SerializeField] private Sprite[] muffinsSprites; // 0 - в коробке, 1 - без коробки, 2 - активный
     [SerializeField] private Sprite[] hollySprites; 
     [SerializeField] private Sprite[] pawsSprites;
-    [SerializeField] private Sprite[] tussySprites; 
+    [SerializeField] private Sprite[] tussySprites; // enum 
     public enum Toy
     {
         Muffin,
