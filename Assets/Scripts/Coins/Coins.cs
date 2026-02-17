@@ -28,7 +28,7 @@ public class Coins : MonoBehaviour
     }
 
     // Метод для получения количества валюты
-    public int GetCoinsInfo()
+    public int GetCoinsCount()
     {
         return coinAmount;
     }
