@@ -13,6 +13,6 @@ public class ViewCoins : MonoBehaviour
         if (onTheGame)
             coinText.text = $"{Coins.Instance.GetCoinsLvlInfo()}";
         else 
-            coinText.text = $"{Coins.Instance.GetCoinsInfo()}";
+            coinText.text = $"{Coins.Instance.GetCoinsCount()}";
     }
 }
