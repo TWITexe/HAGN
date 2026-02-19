@@ -7,6 +7,7 @@ public class EndGame : MonoBehaviour
 {
     [SerializeField] private SaveDataJSON saveDataJson;
     [SerializeField] private ScreenFadeManager fade; // Плавный переход между сценами
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.GetComponent<DoubleTapDetection>() != null ||
