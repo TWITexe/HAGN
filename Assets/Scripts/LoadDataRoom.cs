@@ -9,6 +9,7 @@ public class LoadDataRoom : MonoBehaviour
     [SerializeField] private Sprite hollyRoom;
     [SerializeField] private Sprite pawsRoom;
     [SerializeField] private Sprite tussyRoom;
+
     void Awake()
     {
         switch ((ChooseToy.Toy)PlayerPrefs.GetInt("SelectedToy"))
